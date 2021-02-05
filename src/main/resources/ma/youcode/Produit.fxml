@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.youcode.controllers.ProduitController">
+    <children>
+        <Button fx:id="btnModifier" layoutX="210.0" layoutY="199.0" mnemonicParsing="false" onAction="#modifierProduct" text="Modifier" />
+        <Button fx:id="btnAjouter" layoutX="140.0" layoutY="199.0" mnemonicParsing="false" onAction="#insertProduct" text="Ajouter" />
+        <Button fx:id="btnSupprimer" layoutX="283.0" layoutY="199.0" mnemonicParsing="false" onAction="#deletProduct" text="Supprimer" />
+        <Button fx:id="btnAffficher" layoutX="381.0" layoutY="199.0" mnemonicParsing="false" onAction="#showProduct" text="Afficher" />
+        <TextField fx:id="tfId" layoutX="88.0" layoutY="50.0" />
+        <TextField fx:id="tfNom" layoutX="88.0" layoutY="87.0" />
+        <TextField fx:id="tfQuantite" layoutX="344.0" layoutY="54.0" />
+        <TextField fx:id="tfPrix" layoutX="345.0" layoutY="91.0" />
+        <TextField fx:id="tfMarque" layoutX="88.0" layoutY="135.0" />
+        <Label layoutX="29.0" layoutY="59.0" text="id" />
+        <Label layoutX="29.0" layoutY="99.0" text="nom" />
+        <Label layoutX="29.0" layoutY="147.0" text="marque" />
+        <Label layoutX="278.0" layoutY="104.0" text="prix" />
+        <Label layoutX="272.0" layoutY="67.0" text="quantite" />
+        <TableView fx:id="tableViewProduit" layoutX="117.0" layoutY="246.0" onMouseClicked="#getSelected" prefHeight="184.0" prefWidth="371.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="id" />
+                <TableColumn fx:id="colNom" prefWidth="75.0" text="nom" />
+                <TableColumn fx:id="colQuantite" prefWidth="75.0" text="quantite" />
+                <TableColumn fx:id="colMarque" prefWidth="75.0" text="marque" />
+                <TableColumn fx:id="colPrix" prefWidth="75.0" text="prix" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
